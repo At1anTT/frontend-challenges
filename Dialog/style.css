@@ -1,6 +1,36 @@
-.dialog-button {
-    margin: 30px;
-    background-color: blue;
-    display: inline-block
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.show-dialog-btn {
+  border: 1px solid black;
+  padding: 0.5rem;
+  text-align: center;
+  margin-top: 1rem;
+  box-sizing: border-box;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.popup-container {
+  display: none;
+  box-shadow: 0 0 10px #00000080;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.popup-content {
+  width: 70%;
+  max-width: 500px;
+  padding: 10px;
+  position: relative;
+}
+
+.close-popup {
+  position: absolute;
+  right: 1px;
+  top: 10px;
+  cursor: pointer;
 }
