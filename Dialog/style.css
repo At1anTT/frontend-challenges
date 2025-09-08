@@ -13,8 +13,13 @@
 }
 
 .dialogPopup {
-  display: none;
+  position: fixed;
+  background-color: white;
   text-align: left;
+}
+
+.dialogPopup::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .option {
