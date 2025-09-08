@@ -7,20 +7,67 @@
     <script src="script.js" type="module"></script>
     <title>Document</title>
   </head>
-
   <body>
     <div class="container text-center">
-      <button class="show-dialog-btn">Show dialog</button>
-      <!-- Dialog Header -->
-      <!-- Dialog Сontent -->
-
-      <div class="popup-container">
-        <div class="popup-content">
-          <span class="close-popup">x</span>
-          <h2>Заголовок</h2>
-          <p>Содержимиое окна</p>
+      <dialog class="dialogPopup">
+        <section class="dialogContainer">
+          <!-- Dialog Header -->
+          <header>
+            <h2>Modal Heading</h2>
+            <button class="closeDialog">X</button>
+          </header>
+          <!-- Dialog Сontent -->
+          <div class="dialogContent">
+            This is modal content. You can put any content here. This has a
+            groovy backdrop!
+            <br />
+            You can also close this modal by clicking outside of it or pressing
+            the escape key
+          </div>
+          <footer>
+            <button class="closeDialog">Close</button>
+          </footer>
+        </section>
+      </dialog>
+      <div>
+        <div class="option">
+          <label for="closeOnOutsideClick">Close dialog on outside click</label>
+          <input
+            type="checkbox"
+            class="optionCheckbox"
+            checked
+            id="closeOnOutsideClick"
+          />
+        </div>
+        <div class="option">
+          <label for="closeOnEscape">Close dialog on escape</label>
+          <input
+            type="checkbox"
+            class="closeOnEscape"
+            checked
+            id="closeOnEscape"
+          />
+        </div>
+        <div class="option">
+          <label for="hasCloseButton">Show close icon</label>
+          <input
+            type="checkbox"
+            class="optionCheckbox"
+            checked
+            id="hasCloseButton"
+          />
+        </div>
+        <div class="option">
+          <label for="hasBackdrop">Show backdrop</label>
+          <input
+            type="checkbox"
+            class="optionCheckbox"
+            checked
+            id="hasBackdrop"
+          />
         </div>
       </div>
+      <button class="show-dialog-btn">Show dialog</button>
     </div>
   </body>
 </html>
