@@ -14,9 +14,9 @@
 
 .dialogPopup {
   display: none;
-  text-align: center;
+  text-align: left;
 }
 
 .option {
-  margin: 40px;
+  margin: 15px;
 }
