@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" type="module"></script>
-    <title>Document</title>
+    <script src="../../helpers/header.js" type="module"></script>
+    <script src="./index.js" type="module"></script>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <div class="container text-center">
-      <dialog class="dialogPopup">
-        <section class="dialogContainer">
+      <dialog id="dialogPopup">
+        <section id="dialogContainer">
           <!-- Dialog Header -->
           <header>
             <h2>Modal Heading</h2>
-            <button class="closeDialog">X</button>
+            <button class="closeDialog" id="closeIcon">&#x2715;</button>
           </header>
-          <!-- Dialog Сontent -->
+          <!-- Dialog Body -->
           <div class="dialogContent">
             This is modal content. You can put any content here. This has a
             groovy backdrop!
@@ -43,7 +41,7 @@
           <label for="closeOnEscape">Close dialog on escape</label>
           <input
             type="checkbox"
-            class="closeOnEscape"
+            class="optionCheckbox"
             checked
             id="closeOnEscape"
           />
@@ -67,7 +65,7 @@
           />
         </div>
       </div>
-      <button class="show-dialog-btn">Show dialog</button>
+      <button id="showDialog">Show Dialog</button>
     </div>
   </body>
 </html>
