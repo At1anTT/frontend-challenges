@@ -1,13 +1,26 @@
-const show_popup_btn = document.querySelector('.show-dialog-btn');
-const popup_window = document.querySelector('.dialogPopup');
-const close_btn = document.querySelectorAll('.closeDialog');
+const showPopupButton = document.querySelector('.show-dialog-btn');
+const dialogPopup = document.querySelector('.dialogPopup');
+const closeButtons = document.querySelectorAll('.closeDialog');
 
-show_popup_btn.addEventListener('click', () => {
-  popup_window.showModal();
+showPopupButton.addEventListener('click', () => {
+  dialogPopup.showModal();
 });
 
-close_btn.forEach((event) =>
-  event.addEventListener('click', () => {
-    popup_window.close();
-  })
-);
+closeButtons.forEach((event) => {
+  event.addEventListener('click', (event) => {
+    event.stopPropagation();
+    dialogPopup.close();
+  });
+});
+
+function closeOnBackDropClick({ currentTarget, target }) {
+  console.log(currentTarget);
+  console.log(target);
+  const dialog = currentTarget;
+  const isClickedOnBackDrop = target === dialog;
+  if (isClickedOnBackDrop) {
+    dialogPopup.close();
+  }
+}
+
+dialogPopup.addEventListener('click', closeOnBackDropClick);
