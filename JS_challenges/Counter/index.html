@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" type="module"></script>
+    <title>Counter</title>
+  </head>
+  <body>
+    <div class="container">
+      <span id="current-value">0</span>
+      <div>
+        <button class="buttons" id="decrement-button">-</button>
+        <button class="buttons" id="increment-button">+</button>
+      </div>
+      <form id="step-size-form" action="" enctype>
+        <div class="step-form">
+          <label for="step-size">Increment/Decrement by:</label>
+          <input name="step-size" type="number" value="1" />
+        </div>
+        <button class="buttons reset-button" type="reset">Reset</button>
+      </form>
+      <span
+        >Keyboard shortcuts: + to increment, - to decrement, Page Up/Down to
+        change step value
+      </span>
+    </div>
+  </body>
+</html>
