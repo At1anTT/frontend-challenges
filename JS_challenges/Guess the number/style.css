@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  /* width: max-content; */
+  border: 1px solid black;
+  border-radius: 1px;
+  padding: 2rem 1.5rem;
+}
+
+.header-text {
+  padding: 10px;
+}
+
+.guesses-field {
+  background-color: black;
+  /* width: ; */
+  height: 10px;
+}
