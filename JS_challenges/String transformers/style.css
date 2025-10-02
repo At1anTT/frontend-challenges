@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-border: #e2e8f0;
+  --color-background: #f8fafc;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#input-user-text {
+  width: 30%;
+  border: 1px solid var(--color-border);
+}
+
+.transformer-item {
+  background-color: var(--color-background);
+  margin: 1rem;
+  padding: 2rem;
+}
+
+.trasformer-label {
+    
+}
+
+.transformer-text {
+  padding: 1rem 2rem;
+  background-color: #fff;
+}
