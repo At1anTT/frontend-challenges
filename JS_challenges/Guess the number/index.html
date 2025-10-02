@@ -5,21 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess the number</title>
     <link rel="stylesheet" href="./style.css" />
-    <script scr="./script.js" type="module"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./script.js" type="module"></script>
   </head>
   <body>
     <div class="container">
-      <form class="form-container" action="">
-        <span id="header-text">
-          I'm thinking of a number between 0 and 100. Can you guess it? <br> You have
-          10 guesses remaining.
-        </span>
-        <label for="number-input">Your guess(0-100):</label>
-        <input placeholder="Enter a number" name="number-input" type="text" />
-        <span>Enter a number between 0 and 100</span>
-        <div class="">
-          <button type="submit">Submit Guess</button>
-          <button type="reset">New Game</button>
+      <div>
+        <p id="header-text">
+          I'm thinking of a number between 0 and 100. Can you guess it?
+        </p>
+        <p class="attemp-text">You have 10 guesses remaining.</p>
+      </div>
+
+      <form class="form-container">
+        <label for="number-input" class="label-text">Your guess(0-100):</label>
+        <input
+          placeholder="Enter a number"
+          name="number-input"
+          type="number"
+          min="0"
+          max="100"
+          required
+          aria-describedby="hint"
+        />
+        <small>Enter a number between 0 and 100</small>
+        <div class="buttons-container">
+          <button id="submit-btn" type="submit">Submit Guess</button>
+          <button id="reset-btn" type="reset" disabled>New Game</button>
         </div>
         <div class="guesses-field"></div>
       </form>
