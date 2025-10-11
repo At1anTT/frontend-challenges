@@ -30,11 +30,7 @@
   padding: 2rem;
 }
 
-.trasformer-label {
-    
-}
-
-.transformer-text {
+.transformer-item p:nth-child(2) {
   padding: 1rem 2rem;
   background-color: #fff;
 }
