@@ -15,7 +15,8 @@ userInputText.addEventListener('input', (event) => {
 
   lowerCasetext.innerText = userInputText.value.toLowerCase();
   upperCasetext.innerText = userInputText.value.toUpperCase();
-  camelCasetext.innerText = userInputText.value.toCamelCase();
+
+  camelCasetext.innerText = transformToCamelCaseFunction(userInputText.value);
 });
 
 // function transformToLowerCaseFunction(text) {
@@ -24,9 +25,21 @@ userInputText.addEventListener('input', (event) => {
 // function transformToUpperCaseFunction(text) {
 //   text.tra;
 // }
-// function transformToCamelCaseFunction(text) {
-//   text.tra;
-// }
+
+function transformToCamelCaseFunction(text) {
+  const wordsArray = text.trim().split(' ');
+  let resultText = '';
+
+  wordsArray.forEach((word, index) => {
+    if (index === 0) {
+      resultText += word.toLowerCase();
+    } else {
+      resultText += word[0].toUpperCase() + word.slice(1).toLowerCase();
+    }
+  });
+  return resultText;
+}
+
 // function transformToPascalCaseFunction(text) {
 //   text.tra;
 // }
