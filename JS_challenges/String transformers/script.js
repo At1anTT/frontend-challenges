@@ -17,20 +17,25 @@ userInputText.addEventListener('input', (event) => {
   upperCasetext.innerText = userInputText.value.toUpperCase();
 
   camelCasetext.innerText = transformToCamelCaseFunction(userInputText.value);
+  pascalrCasetext.innerText = transformToPascalCaseFunction(
+    userInputText.value
+  );
+  snakeCasetext.innerText = transformTSnakeCaseFunction(userInputText.value);
+  kebabCasetext.innerText = transformToKebabCaseFunction(userInputText.value);
+  trimCasetext.innerText = transformToTrimCaseFunction(userInputText.value);
 });
 
-// function transformToLowerCaseFunction(text) {
-//   text.toLowerCase();
-// }
-// function transformToUpperCaseFunction(text) {
-//   text.tra;
-// }
+function textSplitter(text) {
+  const wordsArray = text.trim().split(' ');
+  if (text === '') return '';
+
+  return wordsArray;
+}
 
 function transformToCamelCaseFunction(text) {
-  const wordsArray = text.trim().split(' ');
   let resultText = '';
 
-  wordsArray.forEach((word, index) => {
+  textSplitter(text).forEach((word, index) => {
     if (index === 0) {
       resultText += word.toLowerCase();
     } else {
@@ -40,15 +45,47 @@ function transformToCamelCaseFunction(text) {
   return resultText;
 }
 
-// function transformToPascalCaseFunction(text) {
-//   text.tra;
-// }
-// function transformTSnakeCaseFunction(text) {
-//   text.tra;
-// }
-// function transformToKebabCaseFunction(text) {
-//   text.tra;
-// }
-// function transformToTrimCaseFunction(text) {
-//   text.tra;
-// }
+function transformToPascalCaseFunction(text) {
+  let resultText = '';
+
+  textSplitter(text).forEach((word) => {
+    resultText += word[0].toUpperCase() + word.slice(1).toLowerCase();
+  });
+
+  return resultText;
+}
+
+function transformTSnakeCaseFunction(text) {
+  let resultText = '';
+  const wordsArray = textSplitter(text);
+
+  wordsArray.forEach((word, index) => {
+    resultText += word.toLowerCase();
+    if (wordsArray.length > 1 && index < wordsArray.length - 1) {
+      resultText += '_';
+    }
+  });
+  return resultText;
+}
+function transformToKebabCaseFunction(text) {
+  let resultText = '';
+  const wordsArray = textSplitter(text);
+
+  wordsArray.forEach((word, index) => {
+    resultText += word.toLowerCase();
+    if (wordsArray.length > 1 && index < wordsArray.length - 1) {
+      resultText += '-';
+    }
+  });
+  return resultText;
+}
+
+function transformToTrimCaseFunction(text) {
+  let resultText = '';
+
+  textSplitter(text).forEach((word) => {
+    resultText += word.toLowerCase();
+  });
+
+  return resultText;
+}
