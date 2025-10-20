@@ -17,11 +17,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 7vh 0 0 0;
 }
 
 #input-user-text {
   width: 30%;
   border: 1px solid var(--color-border);
+  padding: 0 0.5rem;
+}
+
+.small-text {
+  margin: 0 auto 4%;
 }
 
 .transformer-item {
