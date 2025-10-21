@@ -1,5 +1,8 @@
 * {
   box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 :root {
@@ -12,31 +15,52 @@
   margin: 0 auto;
 }
 
+.sr-only {
+  text-align: center;
+  padding: 16px;
+  box-shadow: 0 0 2px -0.5px #000;
+  margin: 0 0 16px 0;
+}
+
 .input-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 7vh 0 0 0;
+  /* margin: 0 0 0; */
 }
 
 #input-user-text {
-  width: 30%;
+  width: 100%;
+  max-width: 600px;
   border: 1px solid var(--color-border);
-  padding: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  margin: 0 0 16px 0;
+  color: #1a202c;
+  background-color: #fff;
+  border-radius: 6px;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .small-text {
+  color: #4a5568;
   margin: 0 auto 4%;
 }
 
 .transformer-item {
   background-color: var(--color-background);
   margin: 1rem;
-  padding: 2rem;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
 }
 
-.transformer-item p:nth-child(2) {
-  padding: 1rem 2rem;
+.transformer-item:hover {
+  box-shadow: -4px 4px 1px -3px #000;
+}
+
+.transformer-item output:nth-child(2) {
+  padding: 0.1rem 0.2rem;
   background-color: #fff;
+  width: 100%;
 }
