@@ -1,3 +1,5 @@
+
+
 const userInputText = document.getElementById('input-user-text');
 
 const lowerCasetext = document.getElementById('transformer-to-lowercase-text');
