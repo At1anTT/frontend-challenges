@@ -11,16 +11,31 @@
   <body>
     <header>Telephone formatter</header>
 
-    <div class="container">
-      <form action="">
-        <h1 class="form-title">Phone number</h1>
-        <div class="input-wrapper">
-          <input type="text" placeholder="+(123) 456-7890" />
-          <span class="input-image">📞</span>
-        </div>
-
-        <p>Enter a 10-digit phone number. Format: +(123) 456-7890</p>
-      </form>
-    </div>
+    <main>
+      <h1 class="sr-only">Phone Number Formatter</h1>
+      <div class="container">
+        <form action="">
+          <label for="phone" class="form-title">Phone number</label>
+          <div class="input-wrapper">
+            <input
+              name="phone"
+              type="tel"
+              placeholder="+(123) 456-7890"
+              inputmode="tel"
+              autocomplete="off"
+              maxlength="16"
+              aria-describedby="phone-format"
+              aria-invalid="false"
+              required
+              autofocus
+            />
+            <span class="input-image">&#128222;</span>
+          </div>
+          <p id="phone-format">
+            Enter a 10-digit phone number. Format: +(123) 456-7890
+          </p>
+        </form>
+      </div>
+    </main>
   </body>
 </html>
