@@ -12,12 +12,13 @@
     <header>Telephone formatter</header>
 
     <main>
-      <h1 class="sr-only">Phone Number Formatter</h1>
+      <!-- <h1 class="sr-only">Phone Number Formatter</h1> -->
       <div class="container">
         <form action="">
           <label for="phone" class="form-title">Phone number</label>
           <div class="input-wrapper">
             <input
+              id="phone"
               name="phone"
               type="tel"
               placeholder="+(123) 456-7890"
@@ -34,6 +35,12 @@
           <p id="phone-format">
             Enter a 10-digit phone number. Format: +(123) 456-7890
           </p>
+          <p
+            id="phone-error"
+            class="error-message"
+            role="alert"
+            aria-live="polite"
+          ></p>
         </form>
       </div>
     </main>

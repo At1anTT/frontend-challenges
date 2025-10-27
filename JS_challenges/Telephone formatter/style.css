@@ -75,7 +75,7 @@ input[type='tel']::-webkit-inner-spin-button {
   transition: var(--transition);
 }
 
-.input-wrapper:focus(input:focus) {
+.input-wrapper:focus-within {
   outline: none;
   border-color: var(--primary-color);
   box-shadow: 0 0 0 3px rgb(37 99 235 / 10%);
@@ -104,9 +104,6 @@ input[type='tel'].valid + .input-image {
   font-size: 0.875rem;
   line-height: 1.4;
   text-align: left;
-}
-
-#phone-format {
   color: #64748b;
 }
 
