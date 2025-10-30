@@ -22,7 +22,33 @@
         </form>
         <div class="error"><p>INVALID CITY NAME!!!</p></div>
         <div class="weather">
-          <img src="" alt="weather-img">
+          <img
+            id="wether-indicator"
+            src="./images/snow.png"
+            alt="weather-img"
+          />
+          <p id="temperature-value">7</p>
+          <p id="city-name">Moscow</p>
+          <div class="additional-indicators">
+            <div class="additional-indicator">
+              <p id="pressure-value">73%</p>
+              <img
+                class="additional-indicator-icons"
+                src="./images/haze.png"
+                alt="pressure-icons"
+              />
+              <p class="additional-indicator-name">Humidity</p>
+            </div>
+            <div class="additional-indicator">
+              <p id="wind-value">24km/h</p>
+              <img
+                class="additional-indicator-icons"
+                src="./images/wind.png"
+                alt="wind-icons"
+              />
+              <p class="additional-indicator-name">Wind Speed</p>
+            </div>
+          </div>
         </div>
       </div>
     </main>

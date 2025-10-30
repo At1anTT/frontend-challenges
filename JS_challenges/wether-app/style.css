@@ -5,9 +5,9 @@
 .application-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin: 2rem auto;
-  max-width: 25rem;
+  padding: 1.25rem;
+  max-width: min-content;
   border-radius: 20px;
   background: linear-gradient(135deg, #00feba, #5b548a);
 }
@@ -39,3 +39,55 @@ input {
   width: 2rem;
   height: 2rem;
 }
+
+.error {
+  align-self: start;
+}
+.error p {
+  color: #fff;
+  font-weight: 700;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#temperature-value {
+  color: #fff;
+  font-size: 4rem;
+}
+
+#city-name {
+  color: #fff;
+  font-size: 2rem;
+}
+
+#wether-indicator {
+  width: 10rem;
+  height: 10rem;
+  align-self: center;
+}
+
+.additional-indicators {
+  display: flex;
+  gap: 4rem;
+  /* justify-content: space-between; */
+}
+
+/* .additional-indicator { */
+/* } */
+
+.additional-indicator-icons {
+  width: 3rem;
+  height: 3rem;
+}
+
+.additional-indicator-name {
+  color: #fff;
+}
+
+/* #pressure-value { } */
+
+/* .additional-indicator-icons {} */
