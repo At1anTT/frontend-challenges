@@ -72,22 +72,35 @@ input {
 
 .additional-indicators {
   display: flex;
-  gap: 4rem;
-  /* justify-content: space-between; */
+  justify-content: space-between;
+  width: 100%;
 }
 
-/* .additional-indicator { */
-/* } */
+.additional-indicator {
+  display: flex;
+  width: 40%;
+  gap: 0.5rem;
+}
 
 .additional-indicator-icons {
-  width: 3rem;
-  height: 3rem;
+  align-self: center;
+  width: 2rem;
+  height: 2rem;
 }
+
+.additional-indicator-text-descr {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.75rem;
+}
+
+/* #pressure-value { */
+/* ju-self: flex-start; */
+/* } */
 
 .additional-indicator-name {
   color: #fff;
+  width: max-content;
+  /* align-self: flex-end; */
 }
-
-/* #pressure-value { } */
-
-/* .additional-indicator-icons {} */
