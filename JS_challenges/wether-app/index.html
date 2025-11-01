@@ -6,20 +6,28 @@
     <title>Document</title>
     <link rel="stylesheet" href="./dropStyle.css" />
     <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js" type="typemodule"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./script.js" type="module"></script>
   </head>
   <body>
     <main class="container">
-      <div class="application-form">
+      <form class="application-form">
         <h1 class="form-label">check the weather!!</h1>
-        <form class="input-wrapper">
+        <div class="input-wrapper">
           <input
             type="text"
             placeholder="Enter city name"
             name="user-input-city"
+            required
+            aria-label="City name"
           />
-          <button class="search-btn"></button>
-        </form>
+          <button class="search-btn" type="submit" aria-label="Search city"></button>
+        </div>
         <div class="error"><p>INVALID CITY NAME!!!</p></div>
         <div class="weather">
           <img
@@ -27,8 +35,8 @@
             src="./images/snow.png"
             alt="weather-img"
           />
-          <p id="temperature-value">7</p>
-          <p id="city-name">Moscow</p>
+          <h2 id="temperature-value">7</h2>
+          <h3 id="city-name">Moscow</h3>
           <div class="additional-indicators">
             <div class="additional-indicator">
               <img
@@ -37,7 +45,7 @@
                 alt="pressure-icons"
               />
               <div class="additional-indicator-text-descr">
-                <p id="pressure-value">73%</p>
+                <p class="digital-value-indicator" id="pressure-value">73%</p>
                 <p class="additional-indicator-name">Humidity</p>
               </div>
             </div>
@@ -48,13 +56,13 @@
                 alt="wind-icons"
               />
               <div class="additional-indicator-text-descr">
-                <p id="wind-value">24km/h</p>
+                <p class="digital-value-indicator" id="wind-value">24km/h</p>
                 <p class="additional-indicator-name">Wind Speed</p>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </form>
     </main>
   </body>
 </html>

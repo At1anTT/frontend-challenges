@@ -1,30 +1,39 @@
 * {
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
 }
 
 .application-form {
   display: flex;
   flex-direction: column;
-  margin: 2rem auto;
-  padding: 1.25rem;
-  max-width: min-content;
+  margin: 10px auto;
+  padding: 20px;
+  max-width: 400px;
   border-radius: 20px;
   background: linear-gradient(135deg, #00feba, #5b548a);
+  color: #fff;
 }
 
 .form-label {
   text-transform: uppercase;
   margin: 1.5rem auto 2rem;
+  font-weight: 700;
   color: #fff;
 }
 
 .input-wrapper {
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
   margin-bottom: 1rem;
+  gap: 0.8rem;
 }
 
 input {
+  width: 100%;
   border: none;
   outline: none;
   border-radius: 30px;
@@ -52,16 +61,19 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 #temperature-value {
   color: #fff;
   font-size: 4rem;
+  font-weight: 600;
 }
 
 #city-name {
   color: #fff;
   font-size: 2rem;
+  font-weight: 400;
 }
 
 #wether-indicator {
@@ -78,7 +90,7 @@ input {
 
 .additional-indicator {
   display: flex;
-  width: 40%;
+  align-items: center;
   gap: 0.5rem;
 }
 
@@ -92,15 +104,24 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 1.75rem;
+  gap: 1.3rem;
 }
-
-/* #pressure-value { */
-/* ju-self: flex-start; */
-/* } */
 
 .additional-indicator-name {
   color: #fff;
-  width: max-content;
+  max-width: 8rem;
   /* align-self: flex-end; */
 }
+
+.digital-value-indicator {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* 
+#pressure-value { 
+}  */
+
+/* #wind-value { */
+/* } */
