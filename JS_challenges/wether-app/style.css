@@ -58,9 +58,10 @@ input {
 }
 
 .weather {
-  display: flex;
+  text-align: center;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
   margin-bottom: 1rem;
 }
 
@@ -79,7 +80,7 @@ input {
 #wether-indicator {
   width: 10rem;
   height: 10rem;
-  align-self: center;
+  
 }
 
 .additional-indicators {
@@ -114,14 +115,6 @@ input {
 }
 
 .digital-value-indicator {
-  color: #fff;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 500;
 }
-
-/* 
-#pressure-value { 
-}  */
-
-/* #wind-value { */
-/* } */
