@@ -42,8 +42,9 @@ input {
 
 .search-btn {
   background-image: url(./images/magnifyGlass.png);
-  background-size: contain;
+  background-size: 15px 15px;
   background-position: center;
+  background-repeat: no-repeat;
   border-radius: 50%;
   width: 2rem;
   height: 2rem;
@@ -80,7 +81,6 @@ input {
 #wether-indicator {
   width: 10rem;
   height: 10rem;
-  
 }
 
 .additional-indicators {

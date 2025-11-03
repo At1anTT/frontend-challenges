@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" type="module"></script>
+  </head>
+  <body>
+    <main>
+      <form>
+        <select class="customizers" name="horisontal-position-selector">
+          <option value="Left">Left</option>
+          <option value="Right">Right</option>
+        </select>
+        <select class="customizers" name="vertical-position-selector">
+          <option value="Left">Top</option>
+          <option value="Right">Bottom</option>
+        </select>
+        <select class="customizers" name="type-selector">
+          <option value="Left">Normal</option>
+          <option value="Right">Success</option>
+          <option value="Right">Error</option>
+          <option value="Right">Warning</option>
+          <option value="Right">Info</option>
+        </select>
+        <input id="toast-message-input" class="customizers" placeholder="This is a toast message!" />
+        <button id="submit-button" type="submit">Show Toast</button>
+      </form>
+    </main>
+  </body>
+</html>
