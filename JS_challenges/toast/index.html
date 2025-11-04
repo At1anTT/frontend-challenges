@@ -10,22 +10,32 @@
   <body>
     <main>
       <form>
-        <select class="customizers" name="horisontal-position-selector">
+        <select class="customizers" id="horisontal-position-selector">
           <option value="Left">Left</option>
           <option value="Right">Right</option>
         </select>
-        <select class="customizers" name="vertical-position-selector">
+        <select class="customizers" id="vertical-position-selector">
           <option value="Left">Top</option>
           <option value="Right">Bottom</option>
         </select>
-        <select class="customizers" name="type-selector">
+        <select class="customizers" id="type-selector">
           <option value="Left">Normal</option>
           <option value="Right">Success</option>
           <option value="Right">Error</option>
           <option value="Right">Warning</option>
           <option value="Right">Info</option>
         </select>
-        <input id="toast-message-input" class="customizers" placeholder="This is a toast message!" />
+        <input
+          id="toast-message-input"
+          class="customizers"
+          placeholder="This is a toast message!"
+        />
+        <div id="duration-wrapper">
+          <label for="duration">Duration</label>
+          <input id="range-input" type="range" name="duration" min="3" max="10" />
+          <span> <output for="duration">5</output>s</span>
+        </div>
+
         <button id="submit-button" type="submit">Show Toast</button>
       </form>
     </main>
