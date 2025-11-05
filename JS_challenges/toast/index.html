@@ -15,15 +15,15 @@
           <option value="Right">Right</option>
         </select>
         <select class="customizers" id="vertical-position-selector">
-          <option value="Left">Top</option>
-          <option value="Right">Bottom</option>
+          <option value="Top">Top</option>
+          <option value="Bottom">Bottom</option>
         </select>
         <select class="customizers" id="type-selector">
-          <option value="Left">Normal</option>
-          <option value="Right">Success</option>
-          <option value="Right">Error</option>
-          <option value="Right">Warning</option>
-          <option value="Right">Info</option>
+          <option value="Normal">Normal</option>
+          <option value="Success">Success</option>
+          <option value="Error">Error</option>
+          <option value="Warning">Warning</option>
+          <option value="Info">Info</option>
         </select>
         <input
           id="toast-message-input"
@@ -32,12 +32,30 @@
         />
         <div id="duration-wrapper">
           <label for="duration">Duration</label>
-          <input id="range-input" type="range" name="duration" min="3" max="10" />
-          <span> <output for="duration">5</output>s</span>
+          <input
+            id="range-input"
+            type="range"
+            name="duration"
+            min="3"
+            max="10"
+          />
+          <span> <output id="duration-output" for="duration">5</output>s</span>
         </div>
 
-        <button id="submit-button" type="submit">Show Toast</button>
+        <button id="show-toast" type="submit">Show Toast</button>
       </form>
     </main>
+
+    <div class="toast-container tc-left-top flex"></div>
+    <div class="toast-container tc-left-bottom flex"></div>
+    <div class="toast-container tc-right-top flex"></div>
+    <div class="toast-container tc-right-bottom flex"></div>
+
+    <template id="toast-template">
+      <div class="toast flex">
+        <span class="toast-message"></span>
+        <button class="remove flex-center">&#x2715;</button>
+      </div>
+    </template>
   </body>
 </html>
