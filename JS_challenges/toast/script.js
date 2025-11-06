@@ -14,6 +14,8 @@ const leftTopContainer = document.querySelector('.tc-left-top');
 const leftBottomContainer = document.querySelector('.tc-left-bottom');
 const rightTopContainer = document.querySelector('.tc-right-top');
 const rightBottomContainer = document.querySelector('.tc-right-bottom');
+
+
 const toastTemplate = document.getElementById('toast-template');
 
 toastMessageEl.addEventListener('input', handleShowToastButton);
@@ -23,7 +25,8 @@ function handleShowToastButton() {
   showToastButtonEl.disabled = toastMessageEl.value.length === 0;
 }
 
-function displayToast() {
+function displayToast(e) {
+  e.prevent
   const message = toastMessageEl.value;
   const type = toastTypeEl.value;
   const horisontalPosition = horisontalPositionEl.value;

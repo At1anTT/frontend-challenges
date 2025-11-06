@@ -58,3 +58,143 @@ form {
   border: none;
   border-radius: 6px;
 }
+
+.toast-container {
+  position: fixed;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tc-left-top {
+  top: 1rem;
+  left: 1rem;
+  align-items: flex-start;
+}
+
+.tc-left-bottom {
+  bottom: 1rem;
+  left: 1rem;
+  align-items: flex-start;
+}
+
+.tc-right-bottom {
+  right: 1rem;
+  bottom: 1rem;
+  align-items: flex-end;
+}
+
+.toast {
+  padding: 1em;
+  font-weight: 500;
+  background-color: pink;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+
+  color: var(--normal-text);
+  background-color: var(--normal-bg);
+  border: 1px solid var(--normal-border);
+}
+
+.toast.success {
+  color: var(--success-text);
+  background-color: var(--success-bg);
+  border: 1px solid var(--success-border);
+}
+
+.toast.error {
+  color: var(--error-text);
+  background-color: var(--error-bg);
+  border: 1px solid var(--error-border);
+}
+
+.toast.warning {
+  color: var(--warning-text);
+  background-color: var(--warning-bg);
+  border: 1px solid var(--warning-border);
+}
+
+.toast.info {
+  color: var(--info-text);
+  background-color: var(--info-bg);
+  border: 1px solid var(--info-border);
+}
+
+.toast::before {
+  min-width: 1rem;
+  padding: 0.1em 0.5em;
+  font-weight: bold;
+  font-size: 0.85em;
+}
+
+.toast.success::before {
+  content: '\2713';
+}
+
+.toast.error::before {
+  content: '!';
+}
+
+.toast.info::before {
+  content: '\24D8';
+}
+
+.remove {
+  all: unset;
+  margin-left: 1em;
+  cursor: pointer;
+}
+
+.tc-left-top .toast,
+.tc-left-bottom .toast {
+  animation: appearFromLeft 0.2s ease-in-out forwards;
+}
+
+.tc-left-top .toast.fade-out-left,
+.tc-left-bottom .toast.fade-out-left {
+  animation: fadeOutToLeft 0.2s ease-in forwards;
+}
+
+@keyframes appearFromLeft {
+  0% {
+    transform: translate(-200%, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes fadeOutToleft {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-200%, 0);
+  }
+}
+
+.tc-right-top .toast,
+.tc-right-bottom .toast {
+  animation: appearFromRight 0.2s ease-in forwards;
+}
+
+@keyframes appearFromRight {
+  0% {
+    transform: translate(200%, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes fadeOutToRight {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(200%, 0);
+  }
+}
