@@ -1,24 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="./script.js" type="module"></script>
-    <link rel="stylesheet" href="./style.css" />
+    <script src="index.js" type="module"></script>
+    <script src="../../helpers/header.js" type="module"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
+  <body>
+    <div class="container text-center">
+      <section class="size">
+        <label for="rows">Rows</label>
+        <input
+          type="range"
+          name="rows"
+          id="rows"
+          min="2"
+          max="8"
+          value="2"
+          list="markers"
+        />
 
-  <main class="main-form">
-    <div id="inputs-wrapper">
-      <label for="input-rows">Rows</label>
-      <input class="user-input" type="range" min="1" max="8" />
-      <label for="input-columns">Columns</label>
-      <input class="user-input" type="range" min="1" max="8" />
+        <label for="columns">Columns</label>
+        <input
+          type="range"
+          name="columns"
+          id="columns"
+          min="2"
+          max="8"
+          value="2"
+          list="markers"
+        />
+
+        <datalist id="markers">
+          <option value="2"></option>
+          <option value="3"></option>
+          <option value="4"></option>
+          <option value="5"></option>
+          <option value="6"></option>
+          <option value="7"></option>
+          <option value="8"></option>
+        </datalist>
+      </section>
+
+      <table class="table">
+        <tbody class="table-body"></tbody>
+      </table>
     </div>
-    <table>
-      <tr></tr>
-    </table>
-  </main>
-
-  <body></body>
+  </body>
 </html>
