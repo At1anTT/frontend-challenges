@@ -12,6 +12,7 @@
 
 .cell {
   border: 1px solid black;
+  text-align: center;
   height: 50px;
   width: 50px;
   padding-left: 0;

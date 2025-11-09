@@ -26,5 +26,36 @@ function createMatrix(rows, columns) {
   return matrix;
 }
 
+function generateTable(rows, columns) {
+  const matrix = createMatrix(rows, columns);
+  const fragment = document.createDocumentFragment();
 
+  for (let i = 0; i < rows; i++) {
+    const row = document.createElement('tr');
+    for (let j = 0; j < columns; j++) {
+      const cell = document.createElement('td');
+      cell.textContent = matrix[i][j];
+      cell.classList.add('cell');
+      row.appendChild(cell);
+    }
+    fragment.appendChild(row);
+  }
 
+  return fragment;
+}
+
+function updateTable() {
+  tableBodyEl.replaceChildren(generateTable(rows, columns));
+}
+
+rowsEl.addEventListener('input', () => {
+  rows = +rowsEl.value;
+  updateTable();
+});
+
+columnsEl.addEventListener('input', () => {
+  columns = +columnsEl.value;
+  updateTable();
+});
+
+updateTable();
