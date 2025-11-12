@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
+}
+
+.password-checker {
+  margin: 0 auto;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#password-input {
+  margin-bottom: 7px;
+  width: 100%;
+}
+
+.criteries-security {
+  display: flex;
+  gap: 30px;
+}
+
+#progress-bar-wrapper {
+  width: 100%;
+  height: 0.7rem;
+  border: 1px solid #000;
+  border-radius: 20px;
+  /* position: relative; */
+  /* overflow: hidden; */
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 30%;
+  background-color: #4caf50;
+  transition: width 0.5 ease-in-out;
+}
+
+.criteries-stilization {
+  color: rgb(105, 107, 105);
+
+  font-size: 0.7rem;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+
+.criteries-done {
+  color: rgb(21, 146, 26);
+  opacity: 1;
+}
