@@ -19,6 +19,9 @@
         <input
           id="password-input"
           type="text"
+          min="8"
+          max="32"
+          autofocus
           placeholder="Enter the password"
           autocomplete="off"
         />
@@ -32,11 +35,17 @@
           <div class="criteries-stilization" id="number-indicator">Number</div>
           <div class="criteries-stilization" id="symbol-indicator">Symbols</div>
         </div>
+
         <div id="progress-bar-wrapper">
           <div id="progress-bar-fill"></div>
         </div>
-        <div id="password-length-value">Password</div>
-        <div id="security-level-text">Weak</div>
+
+        <div id="password-length-value">
+          Password has <strong id="chars">0</strong> chars
+        </div>
+        <div id="security-level-text">
+          Your passwod is <strong id="stength">Weak</strong>
+        </div>
       </form>
     </main>
   </body>

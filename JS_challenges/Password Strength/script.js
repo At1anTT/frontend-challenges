@@ -6,68 +6,66 @@ const upperCaseIndicator = document.getElementById('uppercase-indicator');
 const numberIndicator = document.getElementById('number-indicator');
 const symbolsIndicator = document.getElementById('symbol-indicator');
 
-passwordInput.addEventListener('input', changeSecurityPassword);
+const lenPassStr = document.getElementById('chars');
+const securityLevelText = document.getElementById('stength');
 
-function changeSecurityPassword(event) {
-  let percentOfSecurity = 0;
-  let lenOfPassowrd = this.value.length;
+const passwordStengths = [
+  { difficulty: 'Weak', color: 'red' },
+  { difficulty: 'Medium', color: 'orange' },
+  { difficulty: 'Strong', color: 'green' },
+];
 
-  if (checkDigitInString(this.value)) {
-    numberIndicator.classList.add('criteries-done');
-    percentOfSecurity += 15;
-  }
-  if (checkLovwerCaseLetterInString(this.value)) {
-    loverCaseIndicator.classList.add('criteries-done');
-    percentOfSecurity += 15;
-  }
-  if (checkUpperCaseLetterInString(this.value)) {
-    upperCaseIndicator.classList.add('criteries-done');
-    percentOfSecurity += 15;
-  }
-  if (checkSpecialSymbolsInString(this.value)) {
-    symbolsIndicator.classList.add('criteries-done');
-    percentOfSecurity += 15;
+const hasNumber = /\d/;
+const hasUpperCase = /[A-Z]/;
+const hasLowerCase = /[a-z]/;
+const hasSpecial = /[^A_Za-z0-9]/;
+
+function getPasswordStrength(strength) {
+  if (strength > 0) {
+    return passwordStengths[2];
   }
 
-  if (lenOfPassowrd > 4) {
-    percentOfSecurity += 15;
-  }
-  if (lenOfPassowrd > 8) {
-    percentOfSecurity += 15;
+  if (strength > 5) {
+    return passwordStengths[1];
   }
 
-  if (lenOfPassowrd > 15) {
-    percentOfSecurity += 15;
-  }
-
-  if (lenOfPassowrd >= 4) {
-    // Если значение percentOfSecurity выше определенного уровня подстраивать цвет
-    console.log(percentOfSecurity);
-    progressBarFill.style.width = String(percentOfSecurity) + '%';
-  } else {
-    percentOfSecurity = 0;
-    progressBarFill.style.width = '0%';
-  }
-
-  
+  return passwordStengths[0];
 }
 
-function checkDigitInString(str) {
-  const regex = /\d/;
-  return regex.test(str);
+function getPasswordScore(text) {
+  let score = 0;
+  if (text.length > 3) {
+    score = Math.min(0, Math.floor(text.length / 3));
+    score +=
+      hasNumber.test(text) +
+      hasUpperCase.test(text) +
+      hasLowerCase.test(text) +
+      hasSpecial.test(text);
+  }
+  return score;
 }
 
-function checkLovwerCaseLetterInString(str) {
-  const regex = /[a-z]/;
-  return regex.test(str);
+function updateUI(strength, score, length, indicators) {
+  strengthEl.textContent = strength.difficulty;
+  progressBar.style.backgroundColor = strength.color;
+  progressBar.style.width = score * 10 + '%';
+  lcEl.className = indicators.lc;
+  ucEl.className = indicators.uc;
+  numEl.className = indicators.num;
+  symEl.className = indicators.sym;
+  charsEl.textContent = length;
 }
 
-function checkUpperCaseLetterInString(str) {
-  const regex = /[A-Z]/;
-  return regex.test(str);
-}
-function checkSpecialSymbolsInString(str) {
-  const regex = /[^a-zA-Z0-9]/;
+passwordInput.addEventListener('input', function () {
+  const password = passwordInput.value;
+  const score = getPasswordScore(passwordInput.value);
+  const strength = getPasswordStrength(score);
+  const [lc, uc, num, sym] = [
+    hasLowerCase.test(password),
+    hasUpperCase.test(password),
+    hasNumber.test(password),
+    hasSpecial.test(password),
+  ];
 
-  return regex.test(str);
-}
+  updateUI(strength, score, password.length, { lc, uc, num, sym });
+});
