@@ -35,7 +35,7 @@ function getPasswordStrength(strength) {
 function getPasswordScore(text) {
   let score = 0;
   if (text.length > 3) {
-    score = Math.min(0, Math.floor(text.length / 3));
+    score = Math.min(6, Math.floor(text.length / 3));
     score +=
       hasNumber.test(text) +
       hasUpperCase.test(text) +
