@@ -21,16 +21,20 @@
   margin-bottom: 7px;
 }
 
-.criteries-stilization {
+/* .criteries-stilization {
   color: rgb(105, 107, 105);
   font-size: 0.7rem;
   font-weight: 400;
   opacity: 0.8;
-}
+} */
 
 .criteries-security {
   display: flex;
   gap: 30px;
+}
+
+.criteries-security .true{
+  color: green;
 }
 
 #progress-bar-wrapper {
@@ -49,8 +53,6 @@
   background-color: red;
   transition: all 0.25s ease-in-out;
 }
-
-
 
 .criteries-done {
   color: green;

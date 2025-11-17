@@ -1,13 +1,13 @@
 const passwordInput = document.getElementById('password-input');
-const progressBarFill = document.getElementById('progress-bar-fill');
+const progressBar = document.getElementById('progress-bar-fill');
 
-const loverCaseIndicator = document.getElementById('lowercase-indicator');
-const upperCaseIndicator = document.getElementById('uppercase-indicator');
-const numberIndicator = document.getElementById('number-indicator');
-const symbolsIndicator = document.getElementById('symbol-indicator');
+const lcEl = document.getElementById('lowercase-indicator');
+const ucEl = document.getElementById('uppercase-indicator');
+const numEl = document.getElementById('number-indicator');
+const symEl = document.getElementById('symbol-indicator');
 
-const lenPassStr = document.getElementById('chars');
-const securityLevelText = document.getElementById('stength');
+const charsEl = document.getElementById('chars');
+const strengthEl = document.getElementById('srtength');
 
 const passwordStengths = [
   { difficulty: 'Weak', color: 'red' },
@@ -18,10 +18,10 @@ const passwordStengths = [
 const hasNumber = /\d/;
 const hasUpperCase = /[A-Z]/;
 const hasLowerCase = /[a-z]/;
-const hasSpecial = /[^A_Za-z0-9]/;
+const hasSpecial = /[^A-Za-z0-9]/;
 
 function getPasswordStrength(strength) {
-  if (strength > 0) {
+  if (strength > 8) {
     return passwordStengths[2];
   }
 
