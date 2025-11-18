@@ -1,23 +1,26 @@
 /* 😢😞😐😀😎 */
 
-
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.rating-wrapper {
-    margin-bottom: 1.5rem;
+.star-wrapper {
+  display: flex;
+  margin-bottom: 1.5rem;
 }
 
-.star::before {
-    content: "★";
-    font-size: 3rem;
-    /* color: #fff; */
-    outline: 1px solid #000;
+.star-empty::before {
+  content: '☆';
+  font-size: 3rem;
+}
+
+.star-filled::before {
+  content: '★';
+  color: gold;
 }
 
 .smile-reaction {
-    content: '😢';
+  content: '😢';
 }
