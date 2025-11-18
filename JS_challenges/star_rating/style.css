@@ -1,0 +1,23 @@
+/* 😢😞😐😀😎 */
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rating-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+.star::before {
+    content: "★";
+    font-size: 3rem;
+    /* color: #fff; */
+    outline: 1px solid #000;
+}
+
+.smile-reaction {
+    content: '😢';
+}
