@@ -11,16 +11,27 @@
   margin-bottom: 1.5rem;
 }
 
+.star {
+    font-size: 3rem;
+}
+
 .star-empty::before {
   content: '☆';
-  font-size: 3rem;
 }
 
 .star-filled::before {
   content: '★';
   color: gold;
+  /* box-shadow: 0 0 1px 2px #000; */
+  
+}
+
+.text-description {
+    margin-bottom: 2rem;
 }
 
 .smile-reaction {
   content: '😢';
+  font-size: 7rem;
 }
+
