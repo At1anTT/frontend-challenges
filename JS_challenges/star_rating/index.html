@@ -1,23 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Star Rating</title>
-    <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js" type="module"></script>
+    <script src="script.js" type="module"></script>
+    <script src="helper.js" type="module"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <div id="star-wrapper">
-        <span class="star-empty" data-index="1"></span>
-        <span class="star-empty" data-index="2"></span>
-        <span class="star" data-index="3"></span>
-        <span class="star" data-index="4"></span>
-        <span class="star" data-index="5"></span>
-      </div>
-      <div class="text-description">Click to see the rating</div>
-      <div class="smile-reaction">😢</div>
+    <div class="container text-center">
+      <div id="starContainer" class="star-container"></div>
+      <div class="info">Click to set the rating</div>
+      <div id="smileyContainer" class="smiley-container"></div>
     </div>
   </body>
 </html>
