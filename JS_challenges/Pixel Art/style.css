@@ -1,3 +1,18 @@
-.table {
+table {
+  margin: 0 auto;
   border: 1px solid black;
+  border-collapse: collapse;
+  table-layout: fixed;
+  min-width: max-content;
+}
+
+td {
+  border: 1px solid black;
+  width: 20px;
+  height: 20px;
+}
+
+.header-message {
+  text-align: center;
+  margin-bottom: 20px;
 }
